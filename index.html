@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <script
+      src="https://kit.fontawesome.com/e56568625c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e56568625c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="mobile-navbar-icon" src="images/icon-menu.svg" alt="" />
+        <img src="images/logo.svg" alt="logo-icon" />
+        <ul class="non-mobile-navbar">
+          <li><span>Collections</span></li>
+          <li><span>Men</span></li>
+          <li><span>Woman</span></li>
+          <li><span>About</span></li>
+          <li><span>Contact</span></li>
+        </ul>
+        <div class="mobile-navbar">
+          <span class="mobile-close-button">X</span>
+          <ul>
+            <li><span>Collections</span></li>
+            <li><span>Men</span></li>
+            <li><span>Woman</span></li>
+            <li><span>About</span></li>
+            <li><span>Contact</span></li>
+          </ul>
+        </div>
+        <div class="nav-icons">
+            <img class="cart-icon" src="images/icon-cart.svg" alt="" />
+            <div class="cart-notification">1</div>
+            <div class="cart">
+              <header>
+                <span>Cart</span>
+              </header>
+              <main>
+                <span class="cart-empty-message">Your cart is empty.</span>
+              </main>
+            </div>
+          <img
+            class="avatar-img"
+            src="images/image-avatar.png"
+            alt="avatar-image"
+          />
+        </div>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="product-images">
+        <img class="main-img" src="images/image-product-1.jpg" alt="" />
+        <div class="main-content-thumbnails">
+          <img
+            class="thumbnail active"
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+          />
+          <img
+            class="thumbnail"
+            src="images/image-product-2-thumbnail.jpg"
+            alt=""
+          />
+          <img
+            class="thumbnail"
+            src="images/image-product-3-thumbnail.jpg"
+            alt=""
+          />
+          <img
+            class="thumbnail"
+            src="images/image-product-4-thumbnail.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="lightbox">
+          <div class="lightbox-img-container">
+            <button class="close-button">X</button>
+            <img class="lightbox-img" src="images/image-product-1.jpg" alt="" />
+            <button class="previous-button">
+              <img src="images/icon-previous.svg" alt="" />
+            </button>
+            <button class="next-button">
+              <img src="images/icon-next.svg" alt="" />
+            </button>
+          </div>
+          <div class="lightbox-thumbnails">
+            <img
+              class="thumbnail active"
+              src="images/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+            <img
+              class="thumbnail"
+              src="images/image-product-2-thumbnail.jpg"
+              alt=""
+            />
+            <img
+              class="thumbnail"
+              src="images/image-product-3-thumbnail.jpg"
+              alt=""
+            />
+            <img
+              class="thumbnail"
+              src="images/image-product-4-thumbnail.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="product-information">
+        <span>Sneaker Company</span>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="product-price">
+          <span class="total">$125.00</span>
+          <div>50%</div>
+          <span class="retail-price">$250.00</span>
+        </div>
+        <div class="buttons">
+          <div class="quantity-box">
+            <span class="minus">-</span>
+            <span class="quantity">1</span>
+            <span class="plus">+</span>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>Add to cart
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="mobile-navbar-overlay"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
