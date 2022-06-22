@@ -25,7 +25,7 @@ const thumbNailOverLay = document.querySelector(".thumbnail-overlay");
 const cartMain = document.querySelector(".cart main");
 const cartNotification = document.querySelector('.cart-notification')
 
-let productQuantity = 0;
+let productQuantity = 1;
 let imgSourcesIndex = 0;
 let productCost = 125;
 
