@@ -25,9 +25,11 @@ const thumbNailOverLay = document.querySelector(".thumbnail-overlay");
 const cartMain = document.querySelector(".cart main");
 const cartNotification = document.querySelector('.cart-notification')
 
-let productQuantity = 1;
-let imgSourcesIndex = 0;
 let productCost = 125;
+let productQuantity = 1;
+let productCartQuantity = 0;
+let imgSourcesIndex = 0;
+
 
 const imgSources = [
   "images/image-product-1.jpg",
@@ -144,12 +146,14 @@ mobileCloseBtn.addEventListener("click", function () {
 });
 
 addToCartBtn.addEventListener("click", function () {
+  productCartQuantity = productCartQuantity + productQuantity;
+
   const productInShoppingCartHTML = ` 
   <img src="images/image-product-1-thumbnail.jpg" alt="" />
   <div class="cart-product-details">
     <span class="cart-product-name">Fall Limited Edition Sneakers</span>
     <div>
-      <span class="cart-quantity">$125.00 x ${productQuantity}</span>
+      <span class="cart-quantity">$125.00 x ${productCartQuantity}</span>
       <span class="cart-total-cost">$${productCost}</span>
     </div>
   </div>
@@ -157,8 +161,9 @@ addToCartBtn.addEventListener("click", function () {
   <button class="cart-checkout-button">Checkout</button>`;
   cartMain.innerHTML = productInShoppingCartHTML;
   cartMain.style.padding = 20 + "px";
-  cartNotification.innerHTML = productQuantity;
+  cartNotification.innerHTML = productCartQuantity;
   cartNotification.style.display = "block";
+ 
 });
 
 function emptyCart() {
@@ -166,6 +171,7 @@ function emptyCart() {
   cartMain.style.padding = 80 + "px";
   productCost = productCost;
   productQuantity = productQuantity;
+  productCartQuantity = 0;
   cartNotification.innerHTML = 0;
   cartNotification.style.display = "none";
 }
